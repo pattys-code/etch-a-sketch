@@ -1,0 +1,15 @@
+.grid{
+    color: grey;
+    display: flex;
+    flex-direction: column;
+}
+
+.pixel_row{
+    display: flex;
+}
+
+.pixel {
+    border: 1px solid black;
+    flex: 1 1 100px;
+    aspect-ratio: 1;
+}
