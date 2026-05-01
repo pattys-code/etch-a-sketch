@@ -1,15 +1,80 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+html * {
+  font-family: 'Chewy', cursive;
+  background-color: rgb(223, 189, 207);
+  color: rgb(63, 28, 55);
+  letter-spacing:0.1em;
+  font-weight: 100;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+.pad {
+    display:flex;
+    background-color: rgb(230, 213, 222);
+    padding: 40px;
+    border-radius: 20px;
+    justify-content: space-around;
+    margin: 0px 100px;
+}
+
+.menu {
+    background-color: inherit;
+}
+
 .grid{
-    color: grey;
     display: flex;
     flex-direction: column;
+    border: 2px solid rgb(63, 28, 55);
+    justify-content: center;
+    background-color: inherit;
+    flex: 0 1 600px;
+    aspect-ratio: 1;
 }
 
 .pixel_row{
     display: flex;
+    background-color: inherit;
 }
 
 .pixel {
-    border: 1px solid black;
+    border: 1px solid rgb(63, 28, 55);
     flex: 1 1 100px;
     aspect-ratio: 1;
+    background-color: inherit;
+}
+
+.slider {
+    padding-bottom: 20px;
+    background-color: inherit;
+}
+
+/*Chrome*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type='range'] {
+      overflow: hidden;
+      width: 150px;
+      -webkit-appearance: none;
+      background-color: transparent;
+    }
+    
+    input[type='range']::-webkit-slider-runnable-track {
+      -webkit-appearance: none;
+      height: 12px;
+      border: 2px solid rgb(63, 28, 55);
+    }
+    
+    input[type='range']::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 5px;
+      width: 5px;
+      cursor:ew-resize;
+      background: rgb(63, 28, 55);
+      box-shadow: -80px 0 0 80px rgb(63, 28, 55);
+    }
+
 }

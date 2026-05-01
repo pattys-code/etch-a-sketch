@@ -4,17 +4,18 @@ let trigger = false;
 const sizeSlider = document.querySelector('#size');
 
 
+
 function setPixelListeners() {
     const pixels = document.querySelectorAll('.pixel');
     pixels.forEach(pixel => {
         pixel.addEventListener('mouseenter', (event) => {
             event.preventDefault();
             if (trigger) {
-                pixel.style.background = 'grey';
+                pixel.style.background = 'rgb(107, 80, 101)';
             }
         });
         pixel.addEventListener('mousedown', (event) => {
-            pixel.style.background = 'grey';
+            pixel.style.background = 'rgb(107, 80, 101)';
         });
     });
 }
@@ -22,7 +23,7 @@ function setPixelListeners() {
 function resetGrid () {
     const pixels = document.querySelectorAll('.pixel');
     pixels.forEach(pixel => {
-        pixel.style.background='white';
+        pixel.style.background='rgb(230, 213, 222)';
     })
 }
 
@@ -40,6 +41,8 @@ function changeSizeGrid () {
         }
     }
     setPixelListeners();
+    const sizeText = document.querySelector('#size-text');
+    sizeText.innerHTML= size; 
 }
 
 // initialize
